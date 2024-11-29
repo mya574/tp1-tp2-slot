@@ -1,0 +1,417 @@
+:root {
+    --light-color:#F1F4ED;
+    --primary-color: #212A29;
+    --secondary-color: #E1D2B4;
+    --accent-color: #607868;
+    --cta-color: #7FA78F;
+    --nav-link-color: #FCA311;
+    --alert-color: #FD9264;
+  
+    /* Colors for Cooking Theme */
+    --cook-light-color:#F1F4ED;
+    --cook-primary-color: #E07A5F;
+    --cook-secondary-color: #F4F1DE;
+    --cook-accent-color: #81B29A;
+    --cook-cta-color: #FFFFFF;
+    --cook-nav-link-color: #E07A5F;
+    --cook-alert-color: #F2CC8F;
+  
+    /* Colors for Sports Theme */
+    --sport-light-color:#F1F4ED;
+    --sport-primary-color: #14213D;
+    --sport-secondary-color: #FCA311;
+    --sport-accent-color: #E5E5E5;
+    --sport-cta-color: #FFFFFF;
+    --sport-nav-link-color: #FCA311;
+    --sport-alert-color: #8D99AE;
+  
+    /* Colors for Art Theme */
+    --art-light-color:#F1F4ED;
+    --art-primary-color: #FAD4D8;
+    --art-secondary-color: #3A3A3A;
+    --art-accent-color: #FFD700;
+    --art-cta-color: #FFFFFF;
+    --art-nav-link-color: #3A3A3A;
+    --art-alert-color: #EACDA3;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap:break-word;
+    word-break:break-word;
+  }
+  
+  html{
+    scrollbar-width: thin;
+    scrollbar-color: var(--nav-link-color) var(--art-secondary-color);
+  }
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  html::-webkit-scrollbar-track {
+    background: var(--art-secondary-color);
+    border-radius:10px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--nav-link-color);
+    border-radius: 10px;
+    border: 2px solid var(--art-secondary-color);
+    border-radius:10px;
+  }
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: var(--alert-color);
+  }
+  
+  body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: system-ui, sans-serif;
+    font-size:17px;
+    line-height:180%;
+  }
+  
+  body.cooking-theme {
+    background-color: var(--cook-secondary-color);
+    color: var(--cook-primary-color);
+  }
+  
+  body.sports-theme {
+    background-color: var(--sport-secondary-color);
+    color: var(--sport-primary-color);
+  }
+  
+  body.art-theme {
+    background-color: var(--art-secondary-color);
+    color: var(--art-primary-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6{
+    margin-bottom:2%;
+  }
+  
+  h1{
+    font-size:180%;
+  }
+  
+  h2{
+    font-size:125%;
+  }
+  
+  h3{
+    font-size:122.5%;
+  }
+  
+  h4{
+    font-size:120%;
+  }
+  
+  h5{
+    font-size:117.5%;
+  }
+  
+  h6{
+    font-size:115%;
+  }
+  
+  .nav-links {
+    color: var(--cook-nav-link-color);
+  }
+  
+  .alert {
+    background-color: var(--art-alert-color);
+  }
+  
+  a,
+  a:visited{
+    color:var(--art-nav-link-color);
+  }
+  
+  a:hover{
+    color:var(--primary-color);
+  }
+  
+  .cta-links{
+    width:max-content;
+    text-decoration:none;
+    padding:.2rem .4rem;
+    border:1px solid var(--primary-color);
+  }
+  
+  .cta-links:hover{
+    background-color:var(--primary-color);
+    color:var(--secondary-color);
+    border:1px solid transparent;
+  }
+  
+  .main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1% 2%;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo-figure{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:.8rem;
+    padding:.2rem .4rem;
+  }
+  
+  .logo-img{
+    width:48px;
+    height:48px;
+    display:block;
+    object-fit:cover;
+    border-radius:50%;
+  }
+  
+  .main-nav {
+    display: flex;
+  }
+  
+  .main-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .main-nav-links li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .main-nav-links li a:hover {
+    color: var(--art-accent-color);
+  }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .burger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-color);
+  }
+  
+  .main-content{
+    display:flex;
+    flex-direction:column;
+    min-height:100dvh;
+    padding:1.2% 2%;
+  }
+  
+  .main-sections{
+    width:max-content;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:3rem;
+    padding:.4% .8%;
+  }
+  
+  .main-sections-title{
+    width:100%;
+  }
+  
+  .main-articles{
+    max-width:80dvw;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    gap:.4rem;
+    padding:2% 2.4%;
+    border-radius:.4rem;
+    background-color:var(--art-light-color);
+    box-shadow:0 0 .4rem 0 var(--primary-color);
+  }
+  
+  .main-articles p{
+    max-width:80dvw;
+  }
+  
+  .main-foot{
+    padding:1% 2%;
+  }
+  
+  .copyright{
+    width:max-content;
+    display:flex;
+    font-weight:900;
+    letter-spacing:.04rem;
+    margin-inline:auto 0;
+  }
+  
+  form {
+    grid-column: 1/-1;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .25em;
+    background-color: var(--light-color);
+    box-shadow: 0 0 .5vw -.25vw var(--primary-color);
+    border-radius: .4rem;
+    margin-inline: auto;
+    margin-block: 1em;
+    padding: 1em 2em;
+  }
+  
+  form label {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: .025em;
+    font-size: min(2.7vw, 18px);
+    line-height: 1.75;
+    color: var(--sport-primary-color);
+    margin-block: 1em 0;
+  }
+  
+  form textarea {
+    min-width: calc(100% - 2em);
+    max-width: calc(100% - 2em);
+    min-height: max(10vh, 10em);
+    max-height: max(25vh, 25em);
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: min(2.7vw, 18px);
+    font-weight: 700;
+    letter-spacing: .025em;
+    line-height: 2;
+    padding: .75em .5em;
+  }
+  
+  form input,
+  form button {
+    width: calc(100% - 2em);
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: .025em;
+    font-size: 110%;
+    line-height: 1.75;
+    color: var(--sport-primary-color);
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"] {
+    font-size: 110%;
+    padding: 0.6em 1.2em;
+    margin-block: 2em 1em;
+  }
+  
+  form .select {
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    border: .15em solid var(--primary-color);
+    border-radius: .4rem;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .select::after {
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--primary-color);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+  
+  select:focus+.focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: .5em solid var(--primary-color);
+    border-radius: 0;
+  }
+  
+  form select,
+  form .select:after {
+    grid-area: select;
+  }
+  
+  
+  form select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+    cursor: pointer;
+    padding: .5em;
+  }
+  
+  form select option {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Chewy", system-ui, sans-serif;
+    font-size: min(2vw, 18px);
+    background-color: hsl(var(--primary-white-opacity) / 0.9);
+    color: var(--primary-grey-darken);
+    font-weight: 500;
+    border-radius: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .main-nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .main-nav-links.active {
+        display: flex;
+    }
+  
+    .burger {
+        display: flex;
+    }
+  }
